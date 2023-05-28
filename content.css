@@ -1,0 +1,116 @@
+.main {
+  padding: 2rem 0;
+}
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-self: center;
+}
+#photo {
+  width: 100%;
+}
+.main-text {
+  width: 80%;
+}
+.main-text h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.main-text p {
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.main-text .main-btn {
+  background-color: var(--brown);
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  width: 50%;
+  transition: 0.3s;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: all 0.3s;
+}
+.main-text .main-btn a {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  color: white;
+}
+.main-text .main-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+.main-text .main-btn:hover {
+  color: white;
+}
+.main-text .main-btn:hover::after {
+  width: 100%;
+}
+.main-img {
+  text-align: center;
+}
+@media screen and (max-width:768px) {
+    .main-wrapper {
+        display: grid;
+        grid-template-columns: auto;
+         align-items: center;
+        justify-self: center; 
+      }
+      .main-text {
+       justify-self: center;
+       width: 80%;
+      }
+      .main-text h1 {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+      }
+      .main-text p {
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+      }
+      .main-text .main-btn {
+        width: 50%;
+      }
+      #photo {
+        display: none;
+      }
+      
+}
+@media screen and (max-width:480px) {
+      .main-text {
+        text-align: center;
+      }
+      .main-text h1 {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+      }
+      .main-text p {
+       margin-top: 2rem;
+        font-size: 1.5rem;
+      }
+      .main-text .main-btn {
+        width: 60%;
+        margin-top: 2.5rem;
+      }
+      #photo {
+        display: none;
+      }
+      
+}
